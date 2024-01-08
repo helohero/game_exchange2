@@ -112,6 +112,7 @@ ordersController.submitOrder(app);
 ordersController.getAllOrders(app);
 ordersController.updateOrderOpRemark(app);
 ordersController.updateOrderOpStatus(app);
+ordersController.deleteOrderById(app);
 
 app.get('/op/orders', (req, res) => {
     res.render('op/orders', { queryData : req.query });

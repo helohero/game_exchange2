@@ -117,10 +117,22 @@ function updateOrderOpStatus(app){
     });
 }
 
+function deleteOrderById(app){
+    app.get('/op/delete_order', (req, res) => {
+        let id = req.query.id;
+        if(!id){ return res.json({ error : 'id none' })}
+
+        orderModel.deleteOrderById(id, (err,rows) => {
+            res.json({ error : err, data : rows });
+        });
+    });
+}
+
 module.exports = {
     submitOrder,
     getOrdersByUserId,
     getAllOrders,
     updateOrderOpRemark,
     updateOrderOpStatus,
+    deleteOrderById,
 }
