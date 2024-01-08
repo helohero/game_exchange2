@@ -1,0 +1,256 @@
+@font-face {
+    font-family: element-icons;
+    src: url(https://cdn.gongfucard.com/tangka/pc/fonts/element-icons.313f7da.woff) format("woff"),url(https://cdn.gongfucard.com/tangka/pc/fonts/element-icons.4520188.ttf) format("truetype");
+    font-weight: 400;
+    font-display: "auto";
+    font-style: normal
+}
+
+.el-form-item:after, .el-form-item:before, .el-form-item__content:after, .el-form-item__content:before {
+    display: table;
+    content: "";
+}
+
+#User {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-top: 10px;
+    min-height: 450px;
+}
+#UserSlider {
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+    padding: 0 12px;
+    border-right: 1px solid #e5e5e5;
+    margin-top: 20px;
+    margin-right: 50px;
+}
+#UserSlider .l-title {
+    color: #FF6F00;
+    font-weight: 700;
+    margin-bottom: 20px;
+    font-size: 16px;
+}
+#UserSlider .c-list {
+    margin: 0 8px;
+    color: #8c8b8b;
+    font-size: 14px;
+}
+#UserSlider .c-list__item {
+    height: 43px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+#UserSlider .c-list__item.active {
+    color: #FF6F00;
+}
+[class*=" el-icon-"], [class^=el-icon-] {
+    font-family: element-icons!important;
+    speak: none;
+    font-style: normal;
+    font-weight: 400;
+    -webkit-font-feature-settings: normal;
+    font-feature-settings: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    vertical-align: baseline;
+    display: inline-block;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+#UserSlider .c-list__icon {
+    margin-right: 30px;
+    font-size: 18px;
+}
+.el-icon-s-order:before {
+    content: "\e7be";
+}
+.el-icon-s-marketing:before {
+    content: "\e7b1";
+}
+
+#UserSlider .c-list__label {
+    display: block;
+    width: 5em;
+}
+#User .user-main {
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+}
+#Profile .l-main__top {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+}
+#Profile .left-panel {
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+    padding-right: 150px;
+}
+#Profile .left-panel, #Profile .left-panel .el-form-item {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+#Profile .l-main__bottom {
+    border-top: 1px solid hsla(0,0%,80%,.67);
+    margin-top: 50px;
+    padding-top: 50px;
+}
+#Profile .l-main__bottom .o-title {
+    font-size: 14px;
+    color: #4cb0e4;
+    font-weight: 700;
+}
+#Profile .l-main__bottom .o-pics {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-top: 50px;
+}
+#Profile .l-main__bottom .o-pics__item {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    font-size: 18px;
+    font-weight: 700;
+    padding: 0 20px;
+    border-right: 1px solid #f4f4f4;
+    color: #8b8b8b;
+}
+#Profile .l-main__bottom .o-pics__item:first-child {
+    padding-left: 0;
+    margin-left: -2px;
+}
+#Profile .l-main__bottom .o-pics__img {
+    max-width: 133px;
+    max-height: 116px;
+}
+
+.profileinfos {
+    margin-top: 20px;
+}
+.profile_moneys {
+    font-size : 22px;
+}
+.profile_moneys .money_num {
+    color : #ff6c00;
+}
+.profile_btns {
+    margin-top: 40px;
+}
+.goods-detail__btn {
+    background: #FF6F00;
+    color: #fff;
+    width: 150px;
+    height: 50px;
+    font-size: 18px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    position: relative;
+}
+
+.modal {
+    max-width: 440px;
+}
+
+#card_exchange h3 {
+    font-size: 22px;
+    margin-top: 10px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+.exchange_form {
+    margin-bottom: 10px;
+}
+#card_exchange .exchange_form_item {
+    margin-bottom: 25px;
+    font-size: 16px;
+}
+#card_exchange .exchange_form_item:last-child {
+    margin-bottom: 0;
+}
+#card_exchange .exchange_form_item label,
+#card_exchange .exchange_form_item .exchange_form_item_input {
+    display:inline-block;
+}
+#card_exchange .exchange_form_item label {
+    width : 60px;
+}
+#card_exchange .exchange_form_item input {
+    -webkit-appearance: none;
+    background-color: #fff;
+    background-image: none;
+    border-radius: 4px;
+    border: 1px solid #dcdfe6;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    color: #606266;
+    display: inline-block;
+    font-size: inherit;
+    outline: 0;
+    padding: 0 15px;
+    -webkit-transition: border-color .2s cubic-bezier(.645,.045,.355,1);
+    -o-transition: border-color .2s cubic-bezier(.645,.045,.355,1);
+    transition: border-color .2s cubic-bezier(.645,.045,.355,1);
+    height: 36px;
+    line-height: 36px;
+    width : 250px;
+}
+.submit_card_exchange_btn {
+    background: #FF6F00;
+    color: #fff;
+    width: 150px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    font-size: 16px;
+    margin : 0 auto;
+}

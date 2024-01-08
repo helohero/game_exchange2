@@ -1,0 +1,69 @@
+<% locals.pageTitle = "账户余额-用户中心" %>
+<% locals.pageCssPath = "/public/css/profile.css" %>
+<% locals.pageJsPath = "/public/js/profile.js" %>
+
+<%- include('common/header') %>
+
+<div class="main">
+    <div id="Global">
+        <%- include('common/bodyHeader') %>
+        <div class="g-main">
+            <div id="User">
+                <div id="UserSlider">
+                    <h3 class="l-title">用户中心</h3>
+                    <ul class="c-list">
+                        <a href="/user/account" aria-current="page" class="c-list__item">
+                            <span class="c-list__label">账号信息</span>
+                        </a>
+                        <a href="/user/myorders" class="c-list__item">
+                            <span class="c-list__label">订单列表</span>
+                        </a>
+                        <a href="/user/profile" class="c-list__item active">
+                            <span class="c-list__label">账户余额</span>
+                        </a>
+                    </ul>
+                </div>
+                <div class="user-main">
+                    <div id="Profile">
+                        <div class="l-main">
+                            <div class="l-main__top">
+                                <div class="left-panel">
+                                    <div class="profileinfos">
+                                        <div class="profile_moneys"></div>
+                                        <div class="profile_btns">
+                                            <div class="goods-detail__btn pointer card_exchange_btn">
+                                                <em>账户充值</em>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal" id="card_exchange">
+    <h3>账户充值</h3>
+    <div class="exchange_form">
+        <div class="exchange_form_item">
+            <label>卡号</label>
+            <div class="exchange_form_item_input">
+                <input type="text" autocomplete="off" class="card_num" placeholder="请输入卡账号" />
+            </div>
+        </div>
+        <div class="exchange_form_item">
+            <label>密码</label>
+            <div class="exchange_form_item_input">
+                <input type="password" autocomplete="off" class="card_password" placeholder="请输入卡密码" />
+            </div>
+        </div>
+        <div class="exchange_form_item">
+            <div class="submit_card_exchange_btn pointer">确定</div>
+        </div>
+    </div>
+</div>
+<%- include('common/headUserinfo') %>
+<%- include('common/footer') %>

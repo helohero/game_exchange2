@@ -1,0 +1,20 @@
+<% locals.pageTitle = "全部分类" %>
+<% locals.pageCssPath = "/public/css/all.css" %>
+<% locals.pageJsPath = "/public/js/all.js" %>
+
+<%- include('common/header') %>
+
+<div class="main">
+    <div id="Global">
+        <%- include('common/bodyHeader') %>
+        <div class="g-main">
+            <div class="g-breadcrumb">
+                <a href="/" class="g-breadcrumb__item nuxt-link-active">首页</a>
+                <strong>全部分类</strong>
+            </div>
+            <div id="Category"></div>
+        </div>
+    </div>
+</div>
+<%- include('common/headUserinfo') %>
+<%- include('common/footer') %>

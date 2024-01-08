@@ -1,0 +1,28 @@
+<script>
+    $.ajax({
+        url : '/get_userinfo',
+        dataType : 'json',
+        cache : false,
+        success : (json) => {
+            if(json.data && json.data.username){
+                $('.logininfos').html(`
+                    <a href="/user/account" class="o-features__item" rel="nofollow">您好！${json.data.username} </a>
+                    <a href="/user/myorders" class="o-features__item orange" rel="nofollow">订单列表</a>
+                    <a href="javascript:void(0)" aria-current="page" class="loginout o-features__item nuxt-link-exact-active nuxt-link-active">退出</a>
+                    <a href="/all" class="o-features__item">全部分类</a>
+                `);
+            }
+        }
+    });
+
+    $('.searchBtn').on('click', function(e){
+        let searchText = $('.searchText').val().trim();
+        if(!searchText){ return; }
+
+        window.location.href = '/list?keyword=' + searchText;
+    });
+
+    $(document).delegate('.loginout','click', function(){
+        window.location.href = '/loginout?redirect_url=' + encodeURIComponent(window.location.href);
+    });
+</script>

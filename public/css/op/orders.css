@@ -1,0 +1,89 @@
+#list {
+    margin : 20px;
+}
+
+a {
+    color:blue;
+}
+
+.ordersbox {
+    margin-top : 10px;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+.qgg-table{
+    border-collapse: collapse;
+    width:100%;
+    border:1px solid #c6c6c6 !important;
+    margin-bottom:20px;
+}
+.qgg-table th{
+    border-collapse: collapse;
+    border-right:1px solid #c6c6c6 !important;
+    border-bottom:1px solid #c6c6c6 !important;
+    padding:15px;
+    font-size:16px;
+    font-weight:bold;
+    text-align:center;
+}
+.qgg-table td{
+    border-collapse: collapse;
+    border-right:1px solid #c6c6c6 !important;
+    border-bottom:1px solid #c6c6c6 !important; 
+    padding:15px 0;
+    font-size:14px;
+    font-weight:normal;
+    text-align:center;
+    word-break: break-all;
+}
+.qgg-table tr:nth-child(odd){
+    background-color:#fff !important; 
+}
+.qgg-table tr:nth-child(even){
+    background-color: #f8f8f8 !important;
+}
+
+
+#delivery_modal h3 {
+    font-size : 20px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.delivery_form_item {
+    margin : 10px 0;
+}
+.delivery_form_item label {
+    font-size : 15px;
+    margin-bottom: 6px;
+    display:inline-block;
+}
+.delivery_form_item_textarea textarea {
+    outline: 0;
+    width : 400px;
+    height : 80px;
+    border:1px solid #ccc;
+    border-radius: 6px;
+    padding : 10px;
+}
+.delivery_form_item .submit_btn {
+    border : 1px solid #FF6F00;
+    display:inline-block;
+    width : 100px;
+    padding : 4px 10px;
+    background-color: #FF6F00;
+    color:#fff;
+}
+
+
+.filters {
+    margin-top : 10px;
+}
+.filter_title { margin-right: 6px; }
+.filter_content {
+    display:inline-block;
+}

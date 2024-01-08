@@ -1,0 +1,55 @@
+<% locals.pageTitle = "订单列表-用户中心" %>
+<% locals.pageCssPath = "/public/css/myorders.css" %>
+<% locals.pageJsPath = "/public/js/myorders.js" %>
+
+<%- include('common/header') %>
+
+<div class="main">
+    <div id="Global">
+        <%- include('common/bodyHeader') %>
+        <div class="g-main">
+            <div id="User">
+                <div id="UserSlider">
+                    <h3 class="l-title">用户中心</h3>
+                    <ul class="c-list">
+                        <a href="/user/account" aria-current="page" class="c-list__item">
+                            <span class="c-list__label">账号信息</span>
+                        </a>
+                        <a href="/user/myorders" class="c-list__item active">
+                            <span class="c-list__label">订单列表</span>
+                        </a>
+                        <a href="/user/profile" class="c-list__item">
+                            <span class="c-list__label">账户余额</span>
+                        </a>
+                    </ul>
+                </div>
+                <div class="user-main">
+                    <div id="Profile">
+                        <div class="l-main">
+                            <div id="GTitle">订单列表</div>
+                            <div class="ordersbox">
+                                <table cellspacing="0" cellpadding="0" border="0" class="qgg-table" style="width:100%;">
+                                    <thead>
+                                        <tr>
+                                            <th>订单编号</th>
+                                            <th>下单时间</th>
+                                            <th>商品名称</th>
+                                            <th>订单金额</th>
+                                            <th>充值账号信息</th>
+                                            <th>订单备注</th>
+                                            <th>平台备注</th>
+                                            <th>订单状态</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="orders_body"></tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<%- include('common/headUserinfo') %>
+<%- include('common/footer') %>

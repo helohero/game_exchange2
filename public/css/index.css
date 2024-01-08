@@ -1,0 +1,594 @@
+.main {
+    margin:0;
+    padding:0;
+}
+
+.le_fBox {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    width: 1200px;
+    margin: 40px auto 0 auto;
+}
+.le_fView {
+    width: 288px;
+    padding: 20px 25px;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    border: 1px solid #E6EAEF;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    -ms-flex-align: center;
+    -webkit-box-align: center;
+    box-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+    margin-right: 15px;
+}
+.le_fView:hover {
+    box-shadow: 0px 20px 40px 0px rgba(0, 0, 0, 0.1);
+    border: 1px solid #FF6F00;
+}
+.le_fImg {
+    width: 70px;
+    height: 70px;
+    border-radius: 20px 0px 20px 20px;
+    display: block;
+}
+.le_fUl {
+    margin-left: 20px;
+}
+.le_fTitle {
+    font-size: 18px;
+    height: 20px;
+    line-height: 20px;
+    color: #333;
+    margin-bottom: 12px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+}
+.le_fText {
+    font-size: 12px;
+    height: 14px;
+    line-height: 14px;
+    color: #999;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+}
+
+.le_hotTitle {
+    font-size: 24px;
+    height: 24px;
+    line-height: 24px;
+    color: #030303;
+    letter-spacing: 2px;
+    width: 1200px;
+    margin: 40px auto 0 auto;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.le_hotTitleSpan {
+    padding-left: 20px;
+    font-size: 14px;
+    height: 14px;
+    line-height: 14px;
+    color: #999;
+}
+
+.le_hotBox {
+    position: relative;
+    width: 1200px;
+    margin: 20px auto 0 auto;
+    height: 235px;
+}
+.le_hotView {
+    width: 228px;
+}
+.le_hotView:nth-of-type(1) {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    background: rgba(34, 192, 100, 0.1);
+}
+.le_hotName {
+    font-size: 16px;
+    height: 18px;
+    line-height: 18px;
+    padding-left: 20px;
+    margin-top: 20px;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    color: #333;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+}
+.le_hotNum {
+    height: 20px;
+    font-size: 12px;
+    color: #fff;
+    margin-top: 10px;
+    width: 100px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    justify-content: space-between;
+}
+.le_hotNumBg {
+    background: #FF6F00;
+    line-height: 20px;
+    padding-left: 25px;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+    flex: 1;
+    display: block;
+}
+.le_hotNumIcon {
+    width: 0px;
+    height: 0px;
+    border-width: 10px 8px;
+    border-style: solid;
+    border-color: #FF6F00 transparent #FF6F00 #FF6F00;
+}
+.le_hotBg {
+    padding-top: 30px;
+    width: 120px;
+    height: 120px;
+    background: rgba(255, 255, 255, 0.9);
+    box-shadow: 0px 6px 0px 0px rgba(0, 0, 0, 0.1);
+    border-radius: 100%;
+    margin: 20px auto 29px auto;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+.le_hotImgBox {
+    width: 64px;
+    height: 64px;
+    margin: 0px auto 5px auto;
+}
+.le_hotImg {
+    border-radius: 100px 0px 100px 100px;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    width: 64px;
+    height: 64px;
+    position: absolute;
+}
+.le_hotLine {
+    width: 70px;
+    height: 12px;
+    background: url("https://ajcard.com/public/static/img/line.svg") no-repeat center center;
+    margin: 0 auto;
+}
+.le_hotView:nth-of-type(2) {
+    position: absolute;
+    top: 0px;
+    left: 243px;
+    background: #F5F5F5;
+}
+.le_hotView:nth-of-type(3) {
+    position: absolute;
+    top: 0px;
+    left: 486px;
+    background: rgba(20, 171, 224, 0.1);
+}
+.le_hotView:nth-of-type(4) {
+    position: absolute;
+    top: 0px;
+    left: 729px;
+    background: #F5F5F5;
+}
+.le_hotLink {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+}
+.le_hotLeftBox {
+    width: 100px;
+}
+.le_hotSmallBg {
+    padding-top: 17px;
+    width: 80px;
+    height: 80px;
+    background: rgba(255, 255, 255, 0.9);
+    box-shadow: 0px 6px 0px 0px rgba(0, 0, 0, 0.1);
+    border-radius: 100%;
+    margin: 15px auto 15px auto;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+.le_hotImgSmallBox {
+    width: 44px;
+    height: 44px;
+    margin: 0px auto 5px auto;
+}
+.le_hotSmallImg {
+    width: 44px;
+    height: 44px;
+    border-radius: 100px 0px 100px 100px;
+    position: absolute;
+}
+.le_hotSmallLine {
+    width: 46px;
+    height: 8px;
+    background: url("https://ajcard.com/public/static/img/line.svg") no-repeat center center;
+    margin: 0 auto;
+}
+.le_hotView:nth-of-type(5) {
+    position: absolute;
+    top: 125px;
+    left: 729px;
+    background: rgba(95, 119, 219, 0.1);
+}
+.le_hotView:nth-of-type(6) {
+    position: absolute;
+    top: 0px;
+    left: 972px;
+    background: rgba(224, 194, 20, 0.1);
+}
+.le_hotView:hover .le_hotImg, .le_hotView:hover .le_hotSmallImg {
+    margin-top: -10px;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+
+.le_recoBox {
+    margin-top: 40px;
+    width: 100%;
+  }
+  .le_recoMain {
+    width: 1200px;
+    margin: 0 auto;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+  }
+  .le_recoView {
+    position: relative;
+    background-color:#FF6F00;
+    background-size: 225px auto;
+    width: 225px;
+    height: 300px;
+    text-align: center;
+  }
+  .le_recoView:hover .le_recoImg {
+    margin-top: -10px;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+  }
+  .le_recoTitle {
+    margin: 20px 0 0 20px;
+    font-size: 24px;
+    height: 24px;
+    line-height: 24px;
+    color: #fff;
+    text-align: left;
+    letter-spacing: 2px;
+  }
+  .le_recoImgBox {
+    margin: 25px auto 20px auto;
+    height: 85px;
+  }
+  .le_recoImg {
+    width: 85px;
+    height: 85px;
+    border-radius: 100px 0px 100px 100px;
+    position: fixed;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    transform: translateX(-50%);
+    position: absolute;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+  }
+  .le_recoName {
+    margin: 10px auto 0 auto;
+    font-size: 16px;
+    height: 18px;
+    line-height: 18px;
+    color: #fff;
+    text-align: center;
+    width: 140px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+  }
+  .le_recoBtnWhite {
+    background: #fff;
+    width: 140px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 16px;
+    color: #FF6F00;
+    display: block;
+    margin: 20px auto 0 auto;
+  }
+  .le_recoAnimate {
+    background: url("https://ajcard.com/public/static/img/reco.svg") no-repeat center center;
+    background-size: 26px;
+    width: 42px;
+    height: 42px;
+    position: absolute;
+    z-index: 1;
+    right: 22px;
+    top: 22px;
+  }
+  .le_pulse {
+    position: absolute;
+    z-index: 100;
+    right: -1px;
+    top: -1px;
+    width: 42px;
+    height: 42px;
+    border: 1px solid #3AD37A;
+    border-radius: 50%;
+    opacity: 0;
+  }
+  .le_pulseSmall {
+    position: absolute;
+    z-index: 100;
+    right: -1px;
+    top: -1px;
+    width: 42px;
+    height: 42px;
+    border: 1px solid #21A056;
+    border-radius: 50%;
+    opacity: 0;
+  }
+  .le_pulseBig {
+    position: absolute;
+    z-index: 100;
+    right: -1px;
+    top: -1px;
+    width: 42px;
+    height: 42px;
+    border: 1px solid #3FDD81;
+    border-radius: 50%;
+    opacity: 0;
+  }
+  .le_pulse {
+    -webkit-animation: warn 0.9s ease-out;
+    -moz-animation: warn 0.9s ease-out;
+    animation: warn 0.9s ease-out;
+    -webkit-animation-iteration-count: infinite;
+    -moz-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+  }
+  .le_pulseSmall {
+    -webkit-animation: warn0 0.9s ease-out;
+    -moz-animation: warn0 0.9s ease-out;
+    animation: warn0 0.9s ease-out;
+    -webkit-animation-iteration-count: infinite;
+    -moz-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+  }
+  .le_pulseBig {
+    -webkit-animation: warn1 0.9s ease-out;
+    -moz-animation: warn1 0.9s ease-out;
+    animation: warn1 0.9s ease-out;
+    -webkit-animation-iteration-count: infinite;
+    -moz-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+  }
+  @keyframes warn {
+    0% {
+      opacity: 1;
+      -moz-transform: scale(0.3);
+      transform: scale(0.3);
+    }
+    to {
+      opacity: 0;
+      -moz-transform: scale(0.9);
+      transform: scale(0.9);
+    }
+  }
+  @keyframes warn0 {
+    0% {
+      opacity: 1;
+      -o-transform: scale(0.6);
+      transform: scale(0.6);
+    }
+    to {
+      opacity: 0;
+      -o-transform: scale(1.2);
+      transform: scale(1.2);
+    }
+  }
+  @keyframes warn1 {
+    0% {
+      opacity: 1;
+      -o-transform: scale(0.9);
+      transform: scale(0.9);
+    }
+    to {
+      opacity: 0;
+      -o-transform: scale(1.5);
+      transform: scale(1.5);
+    }
+  }
+  .le_recoList {
+    width: 180px;
+    height: 300px;
+    margin-left: 15px;
+    background: #fff;
+    text-align: center;
+    border: 1px solid #E6EAEF;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    padding: 0px 20px;
+  }
+  .le_recoPictureBox {
+    width: 70px;
+    height: 70px;
+    margin: 50px auto 20px auto;
+  }
+  .le_recoPicture {
+    width: 70px;
+    height: 70px;
+    border-radius: 20px 0px 20px 20px;
+    /* position: absolute; */
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+  }
+  .le_recoText {
+    font-size: 16px;
+    height: 18px;
+    line-height: 18px;
+    color: #333;
+    border-top: 1px solid rgba(230, 234, 239, 0.5);
+    padding-top: 20px;
+    margin-top: 20px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+  }
+  .le_recoBtn {
+    border: 1px solid #FF6F00;
+    background: #fff;
+    width: 140px;
+    height: 40px;
+    line-height: 40px;
+    margin-top: 25px;
+    font-size: 16px;
+    color: #FF6F00;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+  }
+  .le_recoList:hover {
+    box-shadow: 0px 20px 40px 0px rgba(0, 0, 0, 0.1);
+    border: 1px solid #FF6F00;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+  }
+  .le_recoList:hover .le_recoPicture {
+    margin-top: -10px;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+  }
+  .le_recoList:hover .le_recoText {
+    color: #FF6F00;
+  }
+  .le_recoList:hover .le_recoBtn {
+    background: #FF6F00;
+    color: #fff;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+  }
+
+
+  .le_likesbox{
+    margin-top : 20px;
+  }
+  .like_item {
+    display: inline-block;
+    width : 196px;
+    text-align: center;
+    padding : 15px;
+    border : 1px solid #E6EAEF;
+    margin-right : 10px;
+    margin-bottom: 10px;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+  }
+  .like_item:hover {
+    box-shadow: 0px 20px 40px 0px rgba(0, 0, 0, 0.1);
+    border: 1px solid #FF6F00;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    color:#221e1f;
+  }
+  .like_item:nth-child(5n) {
+    margin-right: 0;
+  }
+  .like_item img {
+    width : 80px;
+    height : 80px;
+    display: block;
+    margin : 0 auto 10px;
+    border-radius: 20px 0px 20px 20px;
+  }
+  .like_item .like_item_name {
+    font-size: 13px;
+    text-overflow : ellipsis;
+	overflow : hidden;
+    white-space:nowrap;
+    width:196px;
+  }
+  .like_item:hover .le_recoBtn {
+    background: #FF6F00;
+    color: #fff;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+.like_item .like_item_price {
+    color:#ff5a34;
+    font-size : 16px;
+    margin-top : 10px;
+}

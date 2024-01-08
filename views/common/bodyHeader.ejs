@@ -1,0 +1,66 @@
+<header id="GHeader">
+    <div class="tool-bar">
+        <div class="tool-bar__inner">
+            <div class="o-features logininfos">
+                <a href="/login" rel="nofollow" class="o-features__item">您还未登录，请登录</a>
+                <a href="/login" rel="nofollow" class="o-features__item award">立即注册</a>
+                <a href="/all" class="o-features__item">全部分类</a>
+            </div>
+        </div>
+    </div>
+    <div class="l-top">
+        <a href="/" class="nuxt-link-exact-active nuxt-link-active" aria-current="page"><img src="/public/imgs/logo.png" class="vj-pic l-top__logo pointer"></a>
+        <div id="SearchBar">
+            <div class="input-bar">
+                <input type="text" name="test123" autocomplete="off" placeholder="请输入想要充值的商品名称" class="input-bar__cmp searchText">
+                <button type="button" class="input-bar__expand pointer searchBtn"><img src="https://cdn.gongfucard.com/kongfuka/pc/img/img_home_03.7422d2d.png?x-oss-process=image/format,webp" class="vj-pic input-bar__icon"></button>
+            </div>
+            <ul class="c-recommend">
+                <li class="c-recommend__item">
+                    <a href="/list?keyword=%E8%8B%B9%E6%9E%9C" class="" rel="nofollow">苹果</a>
+                </li>
+                <li class="c-recommend__item">
+                    <a href="/list?keyword=%E6%8A%96%E5%B8%81" class="" rel="nofollow">抖币</a>
+                </li>
+                <li class="c-recommend__item">
+                    <a href="/list?keyword=%E5%BF%AB%E6%89%8B" class="" rel="nofollow">快手</a>
+                </li>
+                <li class="c-recommend__item">
+                    <a href="/list?keyword=%E8%85%BE%E8%AE%AFQ%E5%B8%81" class="" rel="nofollow">腾讯Q币</a>
+                </li>
+                <li class="c-recommend__item">
+                    <a href="/list?keyword=mycard" class="" rel="nofollow">mycard</a>
+                </li>
+                <li class="c-recommend__item">
+                    <a href="/list?keyword=%E7%8E%8B%E8%80%85%E8%8D%A3%E8%80%80" class="" rel="nofollow">王者荣耀</a>
+                </li>
+                <li class="c-recommend__item">
+                    <a href="/list?keyword=%E5%92%8C%E5%B9%B3%E7%B2%BE%E8%8B%B1" class="" rel="nofollow">和平精英</a>
+                </li>
+                <li class="c-recommend__item">
+                    <a href="/list?keyword=%E5%8E%9F%E7%A5%9E" class="" rel="nofollow">原神</a>
+                </li>
+            </ul>
+        </div>
+        <div class="o-service"> 
+            <a href="/user/profile">
+                <div class="o-service__group pointer"><img src="https://cdn.gongfucard.com/kongfuka/pc/img/img_ka_04.64874da.png?x-oss-process=image/format,webp" class="vj-pic o-service__icon" > <em data-v-6fa70e99="">账户余额</em></div>
+            </a>
+        </div>
+    </div>
+    <div class="c-nav">
+        <div class="c-nav__list">
+            <a href="/" aria-current="page" class="c-nav__item pointer nuxt-link-exact-active nuxt-link-active <% if(!queryData.nav){ %>active<% } %>">首页</a>
+            <a href="/list?parentid=19&nav=iphone" class="c-nav__item pointer <% if(queryData.nav === 'iphone'){ %>active<% } %>"><em>苹果充值</em></a>
+            <a href="/list?parentid=127&nav=tencent" class="c-nav__item pointer <% if(queryData.nav === 'tencent'){ %>active<% } %>""><em>腾讯游戏</em></a>
+            <a href="/list?parentid=136&nav=wangyi" class="c-nav__item pointer <% if(queryData.nav === 'wangyi'){ %>active<% } %>""><em>网易游戏</em></a>
+            <a href="/list?parentid=214&nav=dianka" class="c-nav__item pointer <% if(queryData.nav === 'dianka'){ %>active<% } %>""><em>游戏点卡</em></a>
+            <a href="/list?parentid=20&nav=zhibo" class="c-nav__item pointer <% if(queryData.nav === 'zhibo'){ %>active<% } %>""><em>直播打赏</em></a>
+            <a href="/list?parentid=145&nav=jiaoyou" class="c-nav__item pointer <% if(queryData.nav === 'jiaoyou'){ %>active<% } %>""><em>交友陪玩</em></a>
+            <a href="/list?parentid=154&nav=video" class="c-nav__item pointer <% if(queryData.nav === 'video'){ %>active<% } %>""><em>视频会员</em></a>
+            <a href="/list?parentid=122&nav=music" class="c-nav__item pointer <% if(queryData.nav === 'music'){ %>active<% } %>""><em>音频会员</em></a>
+            <a href="/list?parentid=123&nav=xiaoshuo" class="c-nav__item pointer <% if(queryData.nav === 'xiaoshuo'){ %>active<% } %>""><em>小说阅读</em></a>
+            <a href="/list?parentid=124&nav=other_games" class="c-nav__item pointer <% if(queryData.nav === 'other_games'){ %>active<% } %>""><em>其他游戏</em></a>
+        </div>
+    </div>
+</header>

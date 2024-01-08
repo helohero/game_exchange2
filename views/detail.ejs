@@ -1,0 +1,82 @@
+<% locals.pageTitle = "商品详情" %>
+<% locals.pageCssPath = "/public/css/detail.css" %>
+<% locals.pageJsPath = "/public/js/detail.js" %>
+
+<%- include('common/header') %>
+
+<div class="main">
+    <div id="Global">
+        <%- include('common/bodyHeader') %>
+        <div class="g-main">
+            <div class="g-breadcrumb">
+                <a href="/" class="g-breadcrumb__item nuxt-link-active">首页</a> 
+                <a href="/all" class="g-breadcrumb__item">全部分类</a>
+                <p class="detailBreadNav">
+                    <a href="/goods/list/categoryId/5742/" class="g-breadcrumb__item">抖音直播
+                    </a>
+                    <strong>抖音火山版</strong>
+                </p>
+            </div>
+            <div id="Detail">
+                <div class="l-top">
+                    <div class="goods-info">
+                        <div class="goods-info__wrap good_image"></div>
+                    </div>
+                    <div class="goods-detail">
+                        <h1 class="goods-detail__title good_title"></h1>
+                        <form class="el-form el-form--label-left detail_form"></form>
+                    </div>
+                </div>
+
+                <div class="le_hotTitle">猜你喜欢</div>
+                <div class="le_likesbox"></div>
+
+                <div class="l-bottom">
+                    <div class="l-bottom__wrap">
+                        <div class="detailinfobox">
+                            <h2>商品详情</h2>
+                            <div class="good_detailinfo"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="orderbox" class="modal">
+    <div class="goodinfos" id="Purchase">
+        <h5 class="l-title">购买订单信息</h5>
+        <ul class="order-info"></ul>
+        <h5 class="l-title">账号充值信息</h5>
+        <form class="el-form c-form no-between el-form--label-left" style="margin-left: -10px;">
+            <div class="el-form-item el-form-item--medium">
+                <label class="el-form-item__label" style="width: 102px;">账号信息</label>
+                <div class="el-form-item__content" style="margin-left: 102px;">
+                    <div class="c-form__input el-input el-input--medium">
+                        <input type="text" autocomplete="off" placeholder="" class="el-input__inner order_account">
+                    </div>
+                </div>
+            </div>
+            <div class="el-form-item pad-left el-form-item--medium">
+                <label class="el-form-item__label" style="width: 102px;">订单备注</label>
+                <div class="el-form-item__content" style="margin-left: 102px;">
+                    <div class="c-form__textarea el-textarea el-input--medium">
+                        <textarea autocomplete="off" placeholder="请输入订单备注" class="el-textarea__inner order_remark"></textarea>
+                    </div>
+                </div>
+            </div>
+            <div class="el-form-item pad-left el-form-item--medium">
+                <label class="el-form-item__label" style="width: 102px;">温馨提示</label>
+                <div class="el-form-item__content" style="margin-left: 102px;">
+                    游戏充值类型订单，如有区服信息，请在订单备注里注明。
+                </div>
+            </div>
+        </form>
+        
+        <div class="goods-detail__btn pointer submit_order_btn" style="margin-left: 120px;">
+            <em>提交订单</em>
+        </div>
+    </div>
+</div>
+<%- include('common/headUserinfo') %>
+<%- include('common/footer') %>

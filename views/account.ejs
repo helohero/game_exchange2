@@ -1,0 +1,61 @@
+<% locals.pageTitle = "个人信息-用户中心" %>
+<% locals.pageCssPath = "/public/css/account.css" %>
+<% locals.pageJsPath = "/public/js/account.js" %>
+
+<%- include('common/header') %>
+
+<div class="main">
+    <div id="Global">
+        <%- include('common/bodyHeader') %>
+        <div class="g-main">
+            <div id="User">
+                <div id="UserSlider">
+                    <h3 class="l-title">用户中心</h3>
+                    <ul class="c-list">
+                        <a href="/user/account" aria-current="page" class="c-list__item active">
+                            <span class="c-list__label">账号信息</span>
+                        </a>
+                        <a href="/user/myorders" class="c-list__item">
+                            <span class="c-list__label">订单列表</span>
+                        </a>
+                        <a href="/user/profile" class="c-list__item">
+                            <span class="c-list__label">账户余额</span>
+                        </a>
+                    </ul>
+                </div>
+                <div class="user-main">
+                    <div id="Profile">
+                        <div class="l-main">
+                            <div id="GTitle">账号信息</div>
+                            <div class="l-main__top">
+                                <div class="left-panel">
+                                    <form class="el-form el-form--label-left">
+                                        <div class="el-form-item">
+                                            <label class="el-form-item__label" style="width: 70px;">头像</label>
+                                            <div class="el-form-item__content" style="margin-left: 70px;"><img src="https://cdn.gongfucard.com/tangka/pc/img/img_moren_01.bd1eea8.png?x-oss-process=image/format,webp"  class="vj-pic left-panel__avatar">
+                                            </div>
+                                        </div>
+                                        <% if(userData.phone){ %>
+                                            <div class="el-form-item">
+                                                <label class="el-form-item__label" style="width: 70px;">手机号</label>
+                                                <div class="el-form-item__content" style="margin-left: 70px;"><%= userData.phone %></div>
+                                            </div>
+                                        <% } %>
+                                        <% if(userData.email){ %>
+                                            <div class="el-form-item">
+                                                <label class="el-form-item__label" style="width: 70px;">邮箱</label>
+                                                <div class="el-form-item__content" style="margin-left: 70px;"><%= userData.email %></div>
+                                            </div>
+                                        <% } %>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<%- include('common/headUserinfo') %>
+<%- include('common/footer') %>

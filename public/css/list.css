@@ -1,0 +1,99 @@
+#Detail {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-top : 25px;
+}
+#Detail .detail-slider {
+    width: 240px;
+    margin-right: 20px;
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+    overflow: hidden;
+}
+
+#Detail .l-main {
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
+#Detail .l-main__title{
+    margin: 0 0 20px;
+}
+#Detail .c-grid {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-left: -20px;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+}
+#Detail .c-grid__item {
+    padding: 10px;
+    width: 190px;
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+    border: 1px solid #e6eaef;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+#Detail .c-grid__item:hover{
+    border-color: #FF6F00;
+    color:#000;
+}
+#Detail .c-grid__wrap {
+    width: 195px;
+    height: 195px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    /*background: #f5f5f5;*/
+}
+#Detail .c-grid__icon {
+    width: 115px;
+    height: 115px;
+}
+#Detail .c-grid__footer {
+    padding: 20px 0 10px;
+}
+#Detail .c-grid__footer-name {
+    -o-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    white-space: nowrap;
+}
+#Detail .c-grid__strong {
+    font-size: 14px;
+    color: #ff5339;
+    display: block;
+    margin-top: 10px;
+    font-weight: 700;
+}
+
+#Detail .empty_tips {
+    font-size : 13px;
+    color:#777;
+    text-align: center;
+    margin-top: 50px;
+    display: none;
+}

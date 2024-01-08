@@ -1,0 +1,25 @@
+<% locals.pageTitle = "商品列表" %>
+<% locals.pageCssPath = "/public/css/list.css" %>
+<% locals.pageJsPath = "/public/js/list.js" %>
+
+<%- include('common/header') %>
+
+<div class="main">
+    <div id="Global">
+        <%- include('common/bodyHeader') %>
+        <div class="g-main">
+            <div class="g-breadcrumb breadcrumb_nav"></div>
+            <div id="Detail">
+                <div class="l-main">
+                    <div id="GTitle" class="l-main__title">
+                        商品列表
+                    </div>
+                    <div class="c-grid listbox"></div>
+                    <div class="empty_tips">暂无记录</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<%- include('common/headUserinfo') %>
+<%- include('common/footer') %>

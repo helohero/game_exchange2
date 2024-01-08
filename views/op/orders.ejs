@@ -1,0 +1,59 @@
+<% locals.pageTitle = "需要处理的订单列表" %>
+<% locals.pageCssPath = "/public/css/op/orders.css" %>
+<% locals.pageJsPath = "/public/js/op/orders.js" %>
+
+<%- include('../common/header') %>
+
+<div class="main">
+    <div id="list">
+        <div id="GTitle">订单列表</div>
+        <div class="filters">
+            <div class="filter_item">
+                <label class="filter_title">订单状态</label>
+                <div class="filter_content">
+                    <select class="filter_status">
+                        <option value="1">未完成</option>
+                        <option value="2">已完成</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div class="ordersbox">
+            <table cellspacing="0" cellpadding="0" border="0" class="qgg-table" style="width:100%;">
+                <thead>
+                    <tr>
+                        <th>订单编号</th>
+                        <th>下单时间</th>
+                        <th>商品名称</th>
+                        <th>订单金额</th>
+                        <th>订单状态</th>
+                        <th>充值账号信息</th>
+                        <th>订单备注</th>
+                        <th>平台备注</th>
+                        <th>操作</th>
+                    </tr>
+                </thead>
+                <tbody class="orders_body"></tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<div class="modal" id="delivery_modal">
+    <h3>发货设置</h3>
+    <div class="delivery_form">
+        <div class="delivery_form_item">
+            <label>备注信息</label>
+            <div class="delivery_form_item_textarea">
+                <textarea class="remark_text" placeholder="填写平台备注信息"></textarea>
+            </div>
+        </div>
+        <div class="delivery_form_item">
+            <button class="submit_btn pointer">确定</button>
+        </div>
+    </div>
+</div>
+
+<script src="<%= locals.pageJsPath %>"></script>
+</body>
+</html>

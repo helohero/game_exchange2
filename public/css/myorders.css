@@ -1,0 +1,137 @@
+@font-face {
+    font-family: element-icons;
+    src: url(https://cdn.gongfucard.com/tangka/pc/fonts/element-icons.313f7da.woff) format("woff"),url(https://cdn.gongfucard.com/tangka/pc/fonts/element-icons.4520188.ttf) format("truetype");
+    font-weight: 400;
+    font-display: "auto";
+    font-style: normal
+}
+
+.el-form-item:after, .el-form-item:before, .el-form-item__content:after, .el-form-item__content:before {
+    display: table;
+    content: "";
+}
+
+#User {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-top: 10px;
+    min-height: 450px;
+}
+#UserSlider {
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+    padding: 0 12px;
+    border-right: 1px solid #e5e5e5;
+    margin-top: 20px;
+    margin-right: 50px;
+}
+#UserSlider .l-title {
+    color: #FF6F00;
+    font-weight: 700;
+    margin-bottom: 20px;
+    font-size: 16px;
+}
+#UserSlider .c-list {
+    margin: 0 8px;
+    color: #8c8b8b;
+    font-size: 14px;
+}
+#UserSlider .c-list__item {
+    height: 43px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+#UserSlider .c-list__item.active {
+    color: #FF6F00;
+}
+[class*=" el-icon-"], [class^=el-icon-] {
+    font-family: element-icons!important;
+    speak: none;
+    font-style: normal;
+    font-weight: 400;
+    -webkit-font-feature-settings: normal;
+    font-feature-settings: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    vertical-align: baseline;
+    display: inline-block;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+#UserSlider .c-list__icon {
+    margin-right: 30px;
+    font-size: 18px;
+}
+.el-icon-s-order:before {
+    content: "\e7be";
+}
+.el-icon-s-marketing:before {
+    content: "\e7b1";
+}
+
+#UserSlider .c-list__label {
+    display: block;
+    width: 5em;
+}
+#User .user-main {
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+}
+
+#Profile {
+    margin-top: 20px;
+}
+#Profile #GTitle {
+    margin-bottom: 40px;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+.qgg-table{
+    border-collapse: collapse;
+    width:100%;
+    border:1px solid #c6c6c6 !important;
+    margin-bottom:20px;
+}
+.qgg-table th{
+    border-collapse: collapse;
+    border-right:1px solid #c6c6c6 !important;
+    border-bottom:1px solid #c6c6c6 !important;
+    padding:15px;
+    font-size:16px;
+    font-weight:bold;
+    text-align:center;
+}
+.qgg-table td{
+    border-collapse: collapse;
+    border-right:1px solid #c6c6c6 !important;
+    border-bottom:1px solid #c6c6c6 !important; 
+    padding:15px 6px;
+    font-size:14px;
+    font-weight:normal;
+    text-align:center;
+    word-break: break-all;
+}
+.qgg-table tr:nth-child(odd){
+    background-color:#fff !important; 
+}
+.qgg-table tr:nth-child(even){
+    background-color: #f8f8f8 !important;
+}

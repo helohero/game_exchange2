@@ -1,0 +1,48 @@
+<% locals.pageTitle = "账号登录" %>
+<% locals.pageCssPath = "/public/css/login.css" %>
+<% locals.pageJsPath = "/public/js/login.js" %>
+
+<%- include('common/header') %>
+
+<div class="main">
+    <div id="PlainLayout">
+        <div class="plain-main">
+            <div id="Login">
+                <a href="/" class="nuxt-link-active">
+                    <img src="/public/imgs/logo.png" class="vj-pic o-logo">
+                </a>
+                <div class="l-main">
+                    <div class="o-form">
+                        <div class="form-header">登录充值兔账号</div>
+                        <form class="el-form">
+                            <div class="el-form-item">
+                                <div class="el-form-item__content">
+                                    <div class="el-input el-input--prefix">
+                                        <input type="text" autocomplete="off" placeholder="请输入手机号码或邮箱" class="account_name el-input__inner">
+                                        <span class="el-input__prefix">
+                                            <div class="input-label">账号</div>
+                                        </span>
+                                        <p class="el-input_tips">输入6-20位字符账号</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="el-form-item">
+                                <div class="el-form-item__content">
+                                    <div class="el-input el-input--prefix el-input--suffix">
+                                        <input type="password" autocomplete="off" placeholder="请输入密码" class="password el-input__inner">
+                                        <span class="el-input__prefix"><div class="input-label">密码</div></span>
+                                        <p class="el-input_tips">输入6-20位字符密码</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                        <button class="primary-btn o-form__btn login_submit">登录</button>
+                        <p class="o-form__tips">未注册则自动创建新账号</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<%- include('common/footer') %>
