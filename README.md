@@ -13,6 +13,8 @@ chmod u+x restart.sh
 腾讯云：
 链希 hainanlianxi@163.com   1988sz@666
 
+http://hnlianxi.com
+
 腾讯云
 119.45.189.165
 root
