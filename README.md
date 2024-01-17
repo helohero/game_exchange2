@@ -43,3 +43,9 @@ echo "" > /var/log/secure
 echo "" > /var/log/message
 echo "" > /var/log/messages
 
+支付账号
+手机号码 19310474263
+bang336688@163.com
+lianxi1988
+支付密码 lianxi8888
+
