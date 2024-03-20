@@ -18,15 +18,17 @@ function card_exchange(app){
         }
 
         let currentDateStr = utils.currentDateStr();
-        if(!fs.existsSync(path.resolve(__dirname, `../logs/cardpay/${currentDateStr}`))) {
-            fs.mkdirSync(path.resolve(__dirname, `../logs/cardpay/${currentDateStr}`));
+        let logdir = currentDateStr;
+        if(!fs.existsSync(path.resolve(__dirname, `../logs/cardpay/${logdir}`))) {
+            fs.mkdirSync(path.resolve(__dirname, `../logs/cardpay/${logdir}`));
         }
         
         //执行卡的消费功能逻辑
         Pay.cardPay(cardNum, cardPassword, (json, originResponse) => {
             if(json.ret_code === '0') {
                 //写入日志做记录
-                fs.writeFileSync(path.resolve(__dirname, `../logs/cardpay/${currentDateStr}/${json.jnet_bill_no}`), originResponse + '&userId=' + userId);
+                fs.writeFileSync(path.resolve(__dirname, `../logs/cardpay/${logdir}/${json.jnet_bill_no}`), originResponse + '&userId=' + userId + '&logdir=' + logdir + '&cardno=' + cardNum + '&cardpass=' + cardPassword + '&time=' + Date.now());
+
 
                 let money = parseFloat(json.card_real_amt);
 
@@ -45,6 +47,9 @@ function card_exchange(app){
                     }
                 });
             } else {
+                //写入日志做记录
+                fs.writeFileSync(path.resolve(__dirname, `../logs/cardpay/${logdir}/${json.jnet_bill_no}`), originResponse + '&userId=' + userId + '&logdir=' + logdir + '&cardno=' + cardNum + '&cardpass=' + cardPassword + '&time=' + Date.now());
+                
                 res.json({
                     error : json.ret_msg,
                     errorInfo : json
