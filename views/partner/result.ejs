@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>合作伙伴工具</title>
+    <meta name="renderer" content="webkit">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="shortcut icon" href="/public/imgs/favicon.ico">
+    <script type="text/javascript" src="/public/js/jquery.min.js"></script>
+    <script type="text/javascript" src="/public/js/alert.js"></script>
+    <script type="text/javascript" src="/public/js/utils.js"></script>
+    <link href="/public/partner/bootstrap.min.css" rel="stylesheet">
+    <link href="/public/css/alert.css" rel="stylesheet">
+    <link href="/public/partner/result.css" rel="stylesheet">
+</head>
+
+<body>
+    <header class="site_header">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg bg-body-tertiary">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="#">游充宝-合作伙伴</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="#">首页</a>
+                            </li>
+                        </ul>
+                        <div class="d-flex userInfo" role="search">
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container">
+        <h4 style="margin-top : 15px;">任务执行结果</h4>
+        <div id="statsInfo"></div>
+    </div>
+
+    <div class="container">
+        <div class="cardslist">
+            <table class="table">
+                <thead class="table-light">
+                  <tr>
+                    <th scope="col">支付ID</th>
+                    <th scope="col">卡号</th>
+                    <th scope="col">卡密</th>
+                    <th scope="col">金额</th>
+                    <th scope="col">状态</th>
+                    <th scope="col">备注</th>
+                  </tr>
+                </thead>
+                <tbody id="cardslistBody"></tbody>
+              </table>
+        </div>
+    </div>
+
+
+    <div class="modal fade" id="createTaskModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="staticBackdropLabel">创建销卡任务</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="mb-3">
+                        <label for="taskTitle" class="form-label">任务标题</label>
+                        <input type="text" class="form-control" id="taskTitle" placeholder="不可为空">
+                    </div>
+                    <div class="mb-3">
+                        <label for="taskExcelFile" class="form-label">上传卡密Excel文件</label>
+                        <input class="form-control" type="file" id="taskExcelFile">
+                    </div>
+                    <div class="mb-3" style="font-size: 14px;">
+                        请下载 <a href="/public/partner/cards.xlsx" target="_blank">卡密Excel文件模板</a>，<span class="text-bg-danger">一定要按照模板的数字格式添加卡号和卡密</span>，为了提高成功率，建议每个文件不超过5000条记录
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">关闭</button>
+                    <button type="button" class="btn btn-primary" id="submitTask">提交任务</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="/public/partner/bootstrap.bundle.min.js"></script>
+    <script src="/public/partner/result.js"></script>
+</body>
+
+</html>

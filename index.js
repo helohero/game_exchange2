@@ -101,8 +101,6 @@ usersController.updateRealName(app);
 
 itemsController.getItems(app);
 itemsController.getAllCategorys(app);
-itemsController.initItemsTable(app);
-itemsController.getGuessYourLike(app);
 
 exchangeController.card_exchange(app);
 exchangeController.profileInfo(app);
@@ -118,6 +116,47 @@ app.get('/op/orders', (req, res) => {
     res.render('op/orders', { queryData : req.query });
 });
 
+
+/* ============ Parter Tools  ============= */
+const parterUserController = require('./controllers/partnerusers');
+const tasksController = require('./controllers/tasks');
+
+parterUserController.addParterUser(app);
+parterUserController.login_submit(app);
+parterUserController.loginout(app);
+parterUserController.deleteParterUser(app);
+parterUserController.getAllParterUsers(app);
+parterUserController.getParterUserInfo(app);
+
+parterUserController.calcCardPayTotalMoneySingleDay(app);
+parterUserController.statTaskResults(app);
+
+tasksController.addTask(app);
+tasksController.getAllTasks(app);
+tasksController.getTasksByUserId(app);
+tasksController.deleteTaskById(app);
+
+app.get('/partner/index', (req, res) => {
+    let userId = req.cookies.partner_userid;
+    if(!userId) {
+        return res.redirect('/partner/login');
+    }
+    res.render('partner/index');
+});
+app.get('/partner/login', (req, res) => {
+    res.render('partner/login');
+});
+app.get('/partner/result', (req, res) => {
+    res.render('partner/result');
+});
+
+//运行任务的定时任务
+let runTasks = require('./controllers/runtask');
+runTasks();
+
+/* ================= End =================== */
+
+
 app.listen(port, () => {
     console.log(`Server start: http://localhost:${port}`);
-})
+});

@@ -15,7 +15,7 @@ function login(app){
         let phone = utils.validatePhoneNumber(accountName) && accountName || '';
         let email = utils.validateEmail(accountName) && accountName || '';
 
-        usersModel.getUserByUsernameAndPassword(accountName, password, (err, rows) => {
+        usersModel.getUserByUsernameAndPassword(accountName, md5(password), (err, rows) => {
             if(err){ return res.json({ error : err }); }
             //如果存在该账户，则直接登录
             if(rows.length){

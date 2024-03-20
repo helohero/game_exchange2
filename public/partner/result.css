@@ -1,0 +1,14 @@
+.site_header {
+    background-color: rgb(248,249,250);
+}
+
+.userInfo {
+    font-size: 14px;
+}
+.userInfo span {
+    color: #f00;
+}
+
+.cardslist {
+    margin-top : 15px;
+}

@@ -19,6 +19,17 @@ function formatFloat (src, pos) {
     return Math.round(src * Math.pow(10, pos)) / Math.pow(10, pos);
 }
 
+let formatDate = function (num) {
+    return num > 9 ? num : '0' + num;
+}
+
+let currentDateStr = function (time, split) {
+    let currentDate = time ? new Date(time) : new Date();
+    return [currentDate.getFullYear(), formatDate(currentDate.getMonth() + 1), formatDate(currentDate.getDate())].join(split || '-');
+}
+
+
+
 function validateEmail(email){
     return String(email)
       .toLowerCase()
@@ -38,4 +49,5 @@ module.exports = {
     formatFloat,
     validateEmail,
     validatePhoneNumber,
+    currentDateStr,
 };

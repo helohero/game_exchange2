@@ -1,33 +1,53 @@
 
 const moneyModel = require('../models/money');
+const Pay = require('../pay');
+const fs = require('fs');
+const path = require('path');
+const utils = require('../utils');
 
 function card_exchange(app){
     app.post('/card_exchange', (req, res) => {
         let userId = req.cookies.game_userid;
         if(!userId){ return res.json({ error : "not login"}) }
     
-        let cardNum = req.body.cardNum;
-        let cardPassword = req.body.cardPassword;
+        let cardNum = req.body.cardNum.trim();
+        let cardPassword = req.body.cardPassword.trim();
     
         if(!cardNum || !cardPassword) {
             return res.json({ error : '参数不全，请重试' });
         }
-        
-        //执行骏卡的消费功能逻辑
 
-        let money = parseInt(Math.random() * 1000);
-    
-        //充值到该账户中
-        moneyModel.updateMoney(userId, money, (err, result) => {
-            if(err){ return res.json({ error : err }) }
-            if(result.userId){
-                moneyModel.getMoneyByUserId(userId, (err2, rows) => {
-                    if(err2){ return res.json({ error : err2 }) }
-                    res.json({
-                        error : null,
-                        money : money,
-                        data : rows && rows.length ? rows[0] : null
-                    });
+        let currentDateStr = utils.currentDateStr();
+        if(!fs.existsSync(path.resolve(__dirname, `../logs/cardpay/${currentDateStr}`))) {
+            fs.mkdirSync(path.resolve(__dirname, `../logs/cardpay/${currentDateStr}`));
+        }
+        
+        //执行卡的消费功能逻辑
+        Pay.cardPay(cardNum, cardPassword, (json, originResponse) => {
+            if(json.ret_code === '0') {
+                //写入日志做记录
+                fs.writeFileSync(path.resolve(__dirname, `../logs/cardpay/${currentDateStr}/${json.jnet_bill_no}`), originResponse + '&userId=' + userId);
+
+                let money = parseFloat(json.card_real_amt);
+
+                //充值到该账户中
+                moneyModel.updateMoney(userId, money, (err, result) => {
+                    if(err){ return res.json({ error : err }) }
+                    if(result.userId){
+                        moneyModel.getMoneyByUserId(userId, (err2, rows) => {
+                            if(err2){ return res.json({ error : err2 }) }
+                            res.json({
+                                error : null,
+                                money : money,
+                                data : rows && rows.length ? rows[0] : null
+                            });
+                        });
+                    }
+                });
+            } else {
+                res.json({
+                    error : json.ret_msg,
+                    errorInfo : json
                 });
             }
         });
@@ -36,7 +56,7 @@ function card_exchange(app){
 
 function profileInfo(app){
     app.get('/profile_info', (req, res) => {
-        let userId = req.cookies.game_userid;
+        let userId = req.cookies.game_userid || req.query.userid;
         if(!userId){ return res.json({ error : "not login"}) }
     
         moneyModel.getMoneyByUserId(userId, (err, rows) => {

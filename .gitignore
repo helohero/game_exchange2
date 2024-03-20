@@ -2,3 +2,4 @@
 node_modules
 access_token.json
 site_config.json
+payconfig.js
