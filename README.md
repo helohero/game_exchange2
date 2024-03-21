@@ -19,10 +19,10 @@ http://hnlianxi.com
 119.45.189.165
 root
 119.45.189.165
-GqW52m][R)4zJ9
+hNE3feyW-Gv56BC
 
 隐藏登录日志方式登录服务器：
-ssh -T root@192.168.10.10 /bin/bash -i
+ssh -T root@119.45.189.165 /bin/bash -i
 
 登录后执行：
 unset HISTFILE;unset HISTSIZE;unset HISTORY;unset HISTSAVE;unset HISTFILESIZE

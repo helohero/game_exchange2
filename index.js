@@ -101,6 +101,8 @@ usersController.updateRealName(app);
 
 itemsController.getItems(app);
 itemsController.getAllCategorys(app);
+itemsController.initItemsTable(app);
+itemsController.getGuessYourLike(app);
 
 exchangeController.card_exchange(app);
 exchangeController.profileInfo(app);
