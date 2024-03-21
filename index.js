@@ -153,8 +153,12 @@ app.get('/partner/result', (req, res) => {
 //运行任务的定时任务
 let runTasks = require('./controllers/runtask');
 runTasks();
-
 /* ================= End =================== */
+
+app.get('/tencent9559293464193188836.txt', (req, res) => {
+    let content = fs.readFileSync(path.resolve(__dirname, './tencent9559293464193188836.txt')).toString();
+    res.send(content);
+});
 
 
 app.listen(port, () => {
