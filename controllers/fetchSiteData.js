@@ -2,6 +2,40 @@ let itemsModel = require('../models/items');
 let request = require('request');
 
 function fetchSiteData(app){
+    app.get('/add_item_temp', (req, res) => {
+        //itemsModel.addItem(item.id, item.accountTips, item.categoryDetail, item.categoryId, item.categoryName, item.detail, item.facePrice, item.facePriceDesc, item.goodsTypeId, item.goodsTypeName, item.image, item.name, item.salePrice, item.topExtendInfo, item.unit, item.parentCategoryId, item.parentCategoryName, (err, data) => {
+        
+        //good_id, accountTips, categoryDetail, categoryId, categoryName, detail, facePrice, facePriceDesc, goodsTypeId, goodsTypeName, image, name, salePrice, topExtendInfo, unit, parentCategoryId, parentCategoryName
+
+
+        let item = {
+            id : '104',
+            accountTips : '',
+            categoryDetail : '无',
+            categoryId : '1114',
+            categoryName : '购物卡',
+            detail : '无',
+            facePrice : '1000',
+            facePriceDesc : '1000元',
+            goodsTypeId : '14110',
+            goodsTypeName : '卡值',
+            image : 'http://img2.ztdli.com/upload/2021/03/04/022016_72558.png',
+            name : '天虹购物卡 1000元',
+            salePrice : '1000',
+            topExtendInfo : '[]',
+            unit : '元',
+            parentCategoryId : '999',
+            parentCategoryName : '购物卡',
+        }
+
+        itemsModel.addItem(item.id, item.accountTips, item.categoryDetail, item.categoryId, item.categoryName, item.detail, item.facePrice, item.facePriceDesc, item.goodsTypeId, item.goodsTypeName, item.image, item.name, item.salePrice, item.topExtendInfo, item.unit, item.parentCategoryId, item.parentCategoryName, (err, data) => {
+            res.send({
+                error : err,
+                data : data
+            });
+        });
+    });
+
     app.get('/fetch_items', (req, res) => {
         let cateId = req.query.cateid;
         let typeId = req.query.typeid;

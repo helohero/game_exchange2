@@ -51,6 +51,7 @@
     <div class="c-nav">
         <div class="c-nav__list">
             <a href="/" aria-current="page" class="c-nav__item pointer nuxt-link-exact-active nuxt-link-active <% if(!queryData.nav){ %>active<% } %>">首页</a>
+            <a href="/list?parentid=999&nav=gouwu" class="c-nav__item pointer <% if(queryData.nav === 'gouwu'){ %>active<% } %>""><em>购物卡</em></a>
             <a href="/list?parentid=19&nav=iphone" class="c-nav__item pointer <% if(queryData.nav === 'iphone'){ %>active<% } %>"><em>苹果充值</em></a>
             <a href="/list?parentid=127&nav=tencent" class="c-nav__item pointer <% if(queryData.nav === 'tencent'){ %>active<% } %>""><em>腾讯游戏</em></a>
             <a href="/list?parentid=136&nav=wangyi" class="c-nav__item pointer <% if(queryData.nav === 'wangyi'){ %>active<% } %>""><em>网易游戏</em></a>
@@ -60,7 +61,6 @@
             <a href="/list?parentid=154&nav=video" class="c-nav__item pointer <% if(queryData.nav === 'video'){ %>active<% } %>""><em>视频会员</em></a>
             <a href="/list?parentid=122&nav=music" class="c-nav__item pointer <% if(queryData.nav === 'music'){ %>active<% } %>""><em>音频会员</em></a>
             <a href="/list?parentid=123&nav=xiaoshuo" class="c-nav__item pointer <% if(queryData.nav === 'xiaoshuo'){ %>active<% } %>""><em>小说阅读</em></a>
-            <a href="/list?parentid=124&nav=other_games" class="c-nav__item pointer <% if(queryData.nav === 'other_games'){ %>active<% } %>""><em>其他游戏</em></a>
         </div>
     </div>
 </header>
