@@ -163,6 +163,20 @@ app.get('/tencent9559293464193188836.txt', (req, res) => {
 });
 
 
+const cardcodesControllers = require('./controllers/cardcodes');
+const goodscodesControllers = require('./controllers/goodscodes');
+const cleanDatasControllers = require('./controllers/cleanDatas');
+
+cardcodesControllers.addCardCode(app);
+cardcodesControllers.getAllCardCodes(app);
+goodscodesControllers.addGoodsCodes(app);
+goodscodesControllers.getAllGoodsCodes(app);
+goodscodesControllers.getGoodsCodeByCode(app);
+goodscodesControllers.verifyGoodsCode(app);
+
+cleanDatasControllers.cleanCardAndGoodsCodes(app);
+
+
 app.listen(port, () => {
     console.log(`Server start: http://localhost:${port}`);
 });

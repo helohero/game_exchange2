@@ -43,6 +43,48 @@
         </div>
     </div>
 </div>
+
+<div id="cardcodeInfoModal" class="modal">
+    <h5 class="l-title">卡号密码信息</h5>
+    <form class="el-form c-form no-between el-form--label-left" style="margin-left: -10px;">
+        <div class="el-form-item el-form-item--medium">
+            <label class="el-form-item__label" style="width: 102px;">提货码：</label>
+            <div class="el-form-item__content" style="margin-left: 102px;">
+                <span class="cardcode_goodscode"></span>
+            </div>
+        </div>
+        <div class="el-form-item el-form-item--medium">
+            <label class="el-form-item__label" style="width: 102px;">卡号：</label>
+            <div class="el-form-item__content" style="margin-left: 102px;">
+                <span class="cardcode_cardno"></span>
+            </div>
+        </div>
+        <div class="el-form-item el-form-item--medium">
+            <label class="el-form-item__label" style="width: 102px;">密码：</label>
+            <div class="el-form-item__content" style="margin-left: 102px;">
+                <span class="cardcode_cardpass"></span>
+            </div>
+        </div>
+    </form>
+</div>
+
+<div id="goodscodesForm" class="modal">
+    <h5 class="l-title">提货卡</h5>
+    <form class="el-form c-form no-between el-form--label-left" style="margin-left: -10px;">
+        <div class="el-form-item el-form-item--medium">
+            <label class="el-form-item__label" style="width: 102px;">提货码</label>
+            <div class="el-form-item__content" style="margin-left: 102px;">
+                <div class="c-form__input el-input el-input--medium">
+                    <input type="text" autocomplete="off" placeholder="请输入提货码" class="el-input__inner goodscode_input_text" >
+                </div>
+            </div>
+        </div>
+    </form>
+    <div class="goods-detail__btn pointer submit_goodscode_btn" style="margin-left: 120px;">
+        <em>提交</em>
+    </div>
+</div>
+
 <div id="orderbox" class="modal">
     <div class="goodinfos" id="Purchase">
         <h5 class="l-title">购买订单信息</h5>

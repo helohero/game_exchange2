@@ -28,6 +28,8 @@ $.ajax({
                 itemsData[key].push(item);
             });
 
+            console.log(currentItemData);
+
             //导航的内容复制
             $('.detailBreadNav').html(`
                 <a class="g-breadcrumb__item" href="/list?cateid=${currentItemData.categoryId}">${currentItemData.categoryName}</a>
@@ -113,6 +115,18 @@ $.ajax({
                 </div>
             `];
 
+            if(currentItemData.parentCategoryId === '999') {
+                buyBtnHtml = [`
+                    <div class="el-form-item">
+                        <div class="el-form-item__content" style="margin-left:120px;">
+                            <div class="goods-detail__btn pointer goodscodeBtn">
+                                <em>凭提货码提卡</em>
+                            </div>
+                        </div>
+                    </div>
+                `];
+            }
+
 
             detailFormHtmls.push(exchangeTypeHtmls.join(''));
             detailFormHtmls.push(faceValueHtmls.join(''));
@@ -122,6 +136,42 @@ $.ajax({
             $('.detail_form').html(detailFormHtmls.join(''));
         }
     }
+});
+
+$(document).delegate('.goodscodeBtn', 'click', function(e){
+    $('#goodscodesForm').modal({
+        closeText : 'x'
+    });
+});
+
+$(document).delegate('.submit_goodscode_btn', 'click', function(e){
+    let code = $('.goodscode_input_text').val().trim();
+    if(!code){
+        return utils.alert('提货码不能为空');
+    }
+
+    $.ajax({
+        url : '/verify_goodscode',
+        dataType : 'json',
+        data : {
+            code : code,
+            cateid : currentItemData.categoryId
+        },
+        success : (json) => {
+            if(json.error){
+                return utils.alert('操作失败，请重试');
+            }
+
+            $.modal.close();
+
+            $('#cardcodeInfoModal').modal({
+                closeText : 'x'
+            });
+            $('.cardcode_goodscode').html(json.data.code);
+            $('.cardcode_cardno').html(json.data.card_no);
+            $('.cardcode_cardpass').html(json.data.card_pass);
+        }
+    })
 });
 
 $(document).delegate('.buybtn', 'click', function(e){
