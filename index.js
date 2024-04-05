@@ -179,6 +179,7 @@ cleanDatasControllers.cleanCardAndGoodsCodes(app);
 
 const openapiControllers = require('./controllers/openapi');
 openapiControllers.cardPayService(app);
+openapiControllers.viewTotalPayMoney(app);
 
 
 app.listen(port, () => {

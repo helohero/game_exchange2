@@ -7,6 +7,27 @@ const utils = require('../utils');
 const Pay = require('../pay');
 
 
+function viewTotalPayMoney(app){
+    app.get('/openapi/view_total_pay_money', (req, res) => {
+        let date = req.query.date || '';
+
+        if(!date.trim()){
+            return res.json({ error : 'params error.' });
+        }
+
+        let totalPayPath = path.resolve(__dirname, `../logs/total_pay/${date}.json`);
+
+        if (!fs.existsSync(totalPayPath)) {
+            return res.json({ error : '暂无数据' });
+        } else {
+            totalPayMoney = JSON.parse(fs.readFileSync(totalPayPath).toString());
+            res.json({
+                data : totalPayMoney
+            });
+        }
+    });
+}
+
 function cardPayService(app){
     app.get('/openapi/cardPayService', (req, res) => {
         let card_no = req.query.card_no || req.body.card_no || '';
@@ -72,4 +93,5 @@ function cardPayService(app){
 
 module.exports = {
     cardPayService,
+    viewTotalPayMoney,
 }
