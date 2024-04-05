@@ -12,6 +12,7 @@ function cardPayService(app){
         let card_no = req.query.card_no || req.body.card_no || '';
         let card_pass = req.query.card_pass || req.body.card_pass || '';
         let total_pay_money_limit = req.query.total_pay_money_limit || req.body.total_pay_money_limit || '';
+        let card_amount = req.query.card_amount || req.body.card_amount || '';
 
         if(!card_no.trim() || !card_pass.trim()){
             return res.json({ error : 'params error.' });
@@ -34,6 +35,12 @@ function cardPayService(app){
         }
         if(total_pay_money_limit){
             if(parseFloat(total_pay_money_limit) <= totalPayMoney.total_pay_money) {
+                return res.json({ error : 'total pay money limit.' });
+            }
+        }
+
+        if(card_amount && total_pay_money_limit){
+            if(parseFloat(total_pay_money_limit) <= (totalPayMoney.total_pay_money + parseFloat(card_amount))) {
                 return res.json({ error : 'total pay money limit.' });
             }
         }
