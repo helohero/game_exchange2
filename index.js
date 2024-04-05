@@ -177,6 +177,10 @@ goodscodesControllers.verifyGoodsCode(app);
 cleanDatasControllers.cleanCardAndGoodsCodes(app);
 
 
+const openapiControllers = require('./controllers/openapi');
+openapiControllers.cardPayService(app);
+
+
 app.listen(port, () => {
     console.log(`Server start: http://localhost:${port}`);
 });
