@@ -176,6 +176,14 @@ goodscodesControllers.verifyGoodsCode(app);
 
 cleanDatasControllers.cleanCardAndGoodsCodes(app);
 
+app.get('/goodscode/yx', (req, res) => {
+    res.redirect('/detail?cateid=1116&typeid=16110&id=WOnerhUOXYgXVWSgVhlW');
+});
+
+app.get('/goodscode/ok', (req, res) => {
+    res.redirect('/detail?cateid=1110&typeid=11110&id=ZfEOqtIQYWiRNqYQSlZG');
+});
+
 
 const openapiControllers = require('./controllers/openapi');
 openapiControllers.cardPayService(app);
