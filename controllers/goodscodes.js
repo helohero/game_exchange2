@@ -44,7 +44,10 @@ function addGoodsCodes(app){
 
 function getAllGoodsCodes(app) {
     app.get('/op/goodscodes/getAll', (req, res) => {
-        goodscodesModel.getAllGoodsCodes((err, rows) => {
+        let status = req.query.status || '';
+        let face_value = req.query.face_value || '';
+
+        goodscodesModel.getAllGoodsCodes(status, face_value, (err, rows) => {
             if(err){
                 return res.json({ error : err });
             }

@@ -22,7 +22,25 @@ function getGoodsCodeByCode(code, success){
     });
 }
 
-function getAllGoodsCodes(success) {
+function getAllGoodsCodes(status, face_value, success) {
+    if(status && face_value){
+        goodscodesDb.all('SELECT * FROM codes where status = ? and face_value = ? order by created_at DESC', [status, face_value], (err, rows) => {
+            success && success(err, rows);
+        });
+        return;
+    }
+    if(status){
+        goodscodesDb.all('SELECT * FROM codes where status = ? order by created_at DESC', [status], (err, rows) => {
+            success && success(err, rows);
+        });
+        return;
+    }
+    if(face_value){
+        goodscodesDb.all('SELECT * FROM codes where face_value = ? order by created_at DESC', [face_value], (err, rows) => {
+            success && success(err, rows);
+        });
+        return;
+    }
     goodscodesDb.all('SELECT * FROM codes order by created_at DESC', (err, rows) => {
         success && success(err, rows);
     });

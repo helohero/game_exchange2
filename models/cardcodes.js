@@ -22,7 +22,25 @@ function getRandomCardCodeByFaceValue(type, face_value, success){
     });
 }
 
-function getAllCardCodes(success) {
+function getAllCardCodes(status, face_value, success) {
+    if(status && face_value){
+        cardcodesDb.all('SELECT * FROM codes where status = ? and face_value = ? order by created_at DESC', [status, face_value], (err, rows) => {
+            success && success(err, rows);
+        });
+        return;
+    }
+    if(status){
+        cardcodesDb.all('SELECT * FROM codes where status = ? order by created_at DESC', [status], (err, rows) => {
+            success && success(err, rows);
+        });
+        return;
+    }
+    if(face_value){
+        cardcodesDb.all('SELECT * FROM codes where face_value = ? order by created_at DESC', [face_value], (err, rows) => {
+            success && success(err, rows);
+        });
+        return;
+    }
     cardcodesDb.all('SELECT * FROM codes order by created_at DESC', (err, rows) => {
         success && success(err, rows);
     });

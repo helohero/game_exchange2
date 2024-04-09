@@ -24,7 +24,10 @@ function addCardCode(app){
 
 function getAllCardCodes(app){
     app.get('/op/cardcode/getAll', (req, res) => {
-        cardcodesModel.getAllCardCodes((err, rows) => {
+        let status = req.query.status || '';
+        let face_value = req.query.face_value || '';
+
+        cardcodesModel.getAllCardCodes(status, face_value, (err, rows) => {
             if(err){
                 return res.json({ error : err });
             }
