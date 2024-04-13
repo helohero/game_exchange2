@@ -185,7 +185,7 @@ function statTaskResults(app){
                         try {
                             fileObj = querystring.parse(fileContent);
                             allResults.push(fileObj);
-                            totalPayMoney += parseFloat(fileObj.card_real_amt);
+                            //totalPayMoney += parseFloat(fileObj.card_real_amt);
                             if(fileObj.ret_code === '0') {
                                 totalPayMoney += parseFloat(fileObj.card_real_amt);
                                 successResults.push(fileObj);
