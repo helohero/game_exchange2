@@ -91,7 +91,7 @@ function doCardPay(options, success) {
                     });
                 } else {
                     //写入日志做记录
-                    fs.writeFileSync(path.resolve(__dirname, `../logs/cardpay/${logdir}/${json.jnet_bill_no}`), originResponse + '&userId=' + userData.id + '&logdir=' + logdir);
+                    fs.writeFileSync(path.resolve(__dirname, `../logs/cardpay/${logdir}/${json.jnet_bill_no}`), originResponse + '&userId=' + userData.id + '&logdir=' + logdir + '&cardno=' + options.cardNo + '&cardpass=' + options.cardPass + '&time=' + Date.now());
 
                     success && success({
                         error: json.ret_msg,

@@ -190,6 +190,12 @@ openapiControllers.cardPayService(app);
 openapiControllers.viewTotalPayMoney(app);
 
 
+process.on('uncaughtException', function(err) {
+    let errorFilePath = path.resolve(__dirname, `./errors/${utils.currentDateStr(null, '-')}.txt`);
+    fs.writeFileSync(errorFilePath, err);
+});
+
+
 app.listen(port, () => {
     console.log(`Server start: http://localhost:${port}`);
 });
